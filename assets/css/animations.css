@@ -1,0 +1,558 @@
+/* =========================
+   KEYFRAMES GENERALES
+========================= */
+
+/* Animación de escritura de letras - entrada por clip-path */
+@keyframes typewriter {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+/* Animación de letras que aparecen de forma fluida */
+@keyframes lettersAppear {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+/* Animación de letras con efecto de revelado */
+@keyframes revealLetters {
+  0% {
+    opacity: 0;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  100% {
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/* Fade in suave desde abajo */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in con zoom */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Deslizamiento desde la izquierda */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Deslizamiento desde la derecha */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Rotación de entrada */
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+/* Brillo de entrada */
+@keyframes glowIn {
+  from {
+    opacity: 0;
+    filter: drop-shadow(0 0 0px rgba(50, 222, 213, 0.5));
+  }
+  to {
+    opacity: 1;
+    filter: drop-shadow(0 0 20px rgba(50, 222, 213, 0.3));
+  }
+}
+
+/* Pulso continuo */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Brillo flotante */
+@keyframes floatingGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(50, 222, 213, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(50, 222, 213, 0.6));
+  }
+}
+
+/* Movimiento flotante suave */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Zoom sutil */
+@keyframes subtleZoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+/* Entrada con rotación y fade */
+@keyframes zoomRotateIn {
+  from {
+    opacity: 0;
+    transform: scale(0.3) rotate(-20deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+/* Onda de expansión */
+@keyframes expandWave {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+/* Desplazamiento de texto */
+@keyframes textShimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* =========================
+   CLASES DE ANIMACIÓN
+========================= */
+
+.animate-fade-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-scale {
+  animation: fadeInScale 0.8s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-rotate-in {
+  animation: rotateIn 0.8s ease-out forwards;
+}
+
+.animate-glow-in {
+  animation: glowIn 0.8s ease-out forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-floating-glow {
+  animation: floatingGlow 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-subtle-zoom {
+  animation: subtleZoom 3s ease-in-out infinite;
+}
+
+/* Retrasos en cascada */
+.animate-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-3 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-4 {
+  animation-delay: 0.4s;
+}
+
+.animate-delay-5 {
+  animation-delay: 0.5s;
+}
+
+.animate-delay-6 {
+  animation-delay: 0.6s;
+}
+
+/* =========================
+   NAVBAR ANIMACIONES
+========================= */
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar {
+  animation: slideInDown 0.6s ease-out forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.logo {
+  animation: slideInLeft 0.7s ease-out forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.navbar nav {
+  animation: slideInRight 0.8s ease-out forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.navbar nav a {
+  transition: 0.3s ease-out;
+  position: relative;
+}
+
+.navbar nav a::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease-out;
+}
+
+.navbar nav a:hover::before {
+  width: 100%;
+}
+
+.navbar nav a:hover {
+  color: var(--primary);
+  text-shadow: 0 0 10px rgba(50, 222, 213, 0.65);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   BUTTONS ANIMACIONES
+========================= */
+
+.btn-primary {
+  transition: 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 45px rgba(50, 222, 213, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  transition: 0.3s ease-out;
+}
+
+.btn-secondary:hover {
+  background: var(--primary-dark);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(50, 222, 213, 0.3);
+}
+
+/* =========================
+   HERO ANIMACIONES
+========================= */
+
+.hero-content h1 {
+  animation: typewriter 1.2s ease-out 0.3s forwards, lettersAppear 1.2s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.hero-tag {
+  animation: slideInLeft 0.8s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.hero-visual {
+  animation: slideInRight 1s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.dashboard-card {
+  animation: floatingGlow 3s ease-in-out infinite;
+}
+
+/* =========================
+   TARJETAS ANIMACIONES
+========================= */
+
+.health-card {
+  opacity: 0;
+  /* La animación se activa con el observer */
+}
+
+.health-card.animate-on-scroll {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 1;
+}
+
+.health-subtitle {
+  animation: lettersAppear 0.8s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+.health-title {
+  animation: typewriter 1.5s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.divider {
+  animation: slideInLeft 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.health-text {
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.about-card {
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.about-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(50, 222, 213, 0.25);
+  box-shadow: 0 20px 40px rgba(50, 222, 213, 0.2);
+}
+
+.speaker-card {
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+.speaker-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(50, 222, 213, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+  border-radius: inherit;
+}
+
+.speaker-card:hover::before {
+  opacity: 1;
+}
+
+.speaker-card:hover {
+  transform: translateY(-12px) scale(1.02);
+}
+
+.speaker-card img {
+  transition: all 0.4s ease-out;
+}
+
+.speaker-card:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.15) drop-shadow(0 0 15px rgba(50, 222, 213, 0.4));
+}
+
+/* =========================
+   FOOTER ANIMACIONES
+========================= */
+
+.footer {
+  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.footer-social a {
+  transition: all 0.3s ease-out;
+  position: relative;
+}
+
+.footer-social a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease-out;
+}
+
+.footer-social a:hover::before {
+  width: 100%;
+}
+
+.footer-social a:hover {
+  color: var(--primary);
+  text-shadow: 0 0 8px rgba(50, 222, 213, 0.5);
+}
+
+/* =========================
+   EFECTOS DE SCROLL
+========================= */
+
+.section-title {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.reference-link {
+  transition: all 0.3s ease-out;
+  position: relative;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.reference-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease-out;
+}
+
+.reference-link:hover::after {
+  width: 100%;
+}
+
+
+
+.reference-link:hover {
+  text-shadow: 0 0 10px rgba(50, 222, 213, 0.5);
+}
+
+/* =========================
+   TRANSICIONES SUAVES UNIVERSALES
+========================= */
+
+body * {
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* No animar en ciertos casos */
+[data-no-animate],
+[data-no-animate] * {
+  transition: none !important;
+}
